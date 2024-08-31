@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class DemoBirdMove : MonoBehaviour
 {
-
     [SerializeField] float speed;
     [SerializeField] float upSpeed;
-
     Rigidbody2D rb;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

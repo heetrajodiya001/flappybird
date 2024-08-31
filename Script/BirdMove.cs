@@ -21,16 +21,18 @@ public class BirdMove : MonoBehaviour
         var pos = transform.position;
         pos.x += speed * Time.deltaTime;
         transform.position = pos;
+       
         if(Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = Vector2.up * upspeed ;         
         }
     }
+   
     private void OnCollisionEnter2D(Collision2D collision)
     {//collision.collider.gameObject.name
         WinPage.isgameover = true;
-        toend.SetActive(true);
-        
+        // toend.SetActive(true);
+          rb.velocity = Vector2.zero;
         print("game is over");
     }
 }

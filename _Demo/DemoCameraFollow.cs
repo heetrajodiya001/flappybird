@@ -22,3 +22,4 @@ public class DemoCameraFollow : MonoBehaviour
         transform.position = pos ; 
     }
 }
+

@@ -16,10 +16,10 @@ public class flowCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (WinPage.isgameover) return;
+       
         var pos = transform.position;
         pos.x = target.position.x + offset . x;
         transform.position = pos;
-       // WinPage.isgameover = true;  
+       
     }   
 }

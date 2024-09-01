@@ -10,6 +10,7 @@ public class WinPage : MonoBehaviour
     {
         toend.SetActive(false);
         isgameover = false;
+
     }
 
 }

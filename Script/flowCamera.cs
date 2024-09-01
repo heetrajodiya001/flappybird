@@ -19,5 +19,11 @@ public class flowCamera : MonoBehaviour
         var pos = transform.position;
         pos.x = target.position.x + offset . x;
         transform.position = pos;       
-    }   
+    }
+    public void Resetgame()
+    {
+        var pos = transform.position;
+        pos.x = 0;
+        transform.position = pos;
+    }
 }

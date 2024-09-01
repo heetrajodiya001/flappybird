@@ -12,12 +12,16 @@ public class GeneratPilar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(player.position.x + pileroffset > lastposition)
+        {
+            Generatpiller();
+        }
     }
     public void Generatpiller()
     {
-        var pos = new Vector2(lastposition,0f);
-
-
+        lastposition += pileroffset;
+        var pos = new Vector2(lastposition,0);
+        var p = Instantiate(pilerprefab);
+        p.transform.position = pos;
     }
 }

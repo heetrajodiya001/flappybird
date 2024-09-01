@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class BirdMove : MonoBehaviour
 {
     [SerializeField]
@@ -27,11 +28,16 @@ public class BirdMove : MonoBehaviour
             rb.velocity = Vector2.up * upspeed ;         
         }
     }
-   
+    public void Resetgame()
+    {
+        var pos = transform.position;   
+        pos.x = 0;
+        transform.position = pos;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {//collision.collider.gameObject.name
         WinPage.isgameover = true;
-        // toend.SetActive(true);
+         toend.SetActive(true);
           rb.velocity = Vector2.zero;
         print("game is over");
     }

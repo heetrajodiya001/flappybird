@@ -15,11 +15,9 @@ public class flowCamera : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
-       
+    {       
         var pos = transform.position;
         pos.x = target.position.x + offset . x;
-        transform.position = pos;
-       
+        transform.position = pos;       
     }   
 }

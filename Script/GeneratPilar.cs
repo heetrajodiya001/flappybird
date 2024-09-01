@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class GeneratPilar : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    [SerializeField] GameObject pilerprefab;
+    [SerializeField] Transform player;
+    [SerializeField] float pileroffset;
+    
+    float lastposition = 0;
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void Generatpiller()
+    {
+        var pos = new Vector2(lastposition,0f);
+
+
     }
 }

@@ -6,6 +6,7 @@ public class WinPage : MonoBehaviour
     public static bool isgameover = false;
     public GameObject toend;
     public BirdMove birdMove;
+   
     private void Start()
     {
         if (birdMove == null)
@@ -18,5 +19,6 @@ public class WinPage : MonoBehaviour
         toend.SetActive(false);
         isgameover = false;
         birdMove.resetgame();
+       
     }
 }

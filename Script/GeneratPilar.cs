@@ -8,21 +8,18 @@ public class GeneratPilar : MonoBehaviour
     [SerializeField] GameObject pilerprefab;
     [SerializeField] Transform player;
     [SerializeField] float pileroffset;
-   /* public Text text;
-    private int score = 0;*/
+    [SerializeField] float destroypilar;
     float lastposition = 0;
-    // Update is called once per frame
+    List<GameObject> pilar = new List<GameObject>();
     void Update()
     {
-        if(player.position.x + pileroffset > lastposition)
+        if(player.position.x + pileroffset > lastposition) 
         {
-            Generatpiller();
-           // uplodscore();
+            Generatpiller();          
         }
-        else if(player.position.x - pileroffset > lastposition)
+        if(player.position.x - pilar[0].transform.position.x > destroypilar)
         {
             Destroypilar();
-            Destroy(gameObject);
         }
     }
     public void Generatpiller()
@@ -31,20 +28,14 @@ public class GeneratPilar : MonoBehaviour
         var pos = new Vector2(lastposition,0);
         var p = Instantiate(pilerprefab);
         p.transform.position = pos;
-        
+        pilar.Add(p);
     }
-    /* private void uplodscore()
-     {
-         text.text = ""+ score.ToString();
-     }*/
     public void Destroypilar()
     {
-        for(float i = transform.position.x; i >= 0;i--)
+        if(pilar.Count > 0 )
         {
-            lastposition -= pileroffset;
-            var pos = new Vector2(lastposition, 0);
-            var p = Instantiate(pilerprefab);
-            p.transform.position = pos;
+            Destroy(pilar[0]);
+           pilar.RemoveAt(0);
         }
     }
 }

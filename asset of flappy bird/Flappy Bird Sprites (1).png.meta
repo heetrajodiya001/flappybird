@@ -393,7 +393,7 @@ TextureImporter:
         width: 50
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -401,6 +401,69 @@ TextureImporter:
       bones: []
       spriteID: 4132eff59733931478ab112ed40647c3
       internalID: 701954443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flappy Bird Sprites (1)_11
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 61
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7518a51c89a86fd469d9fd7473a023b7
+      internalID: 1749682042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flappy Bird Sprites (1)_12
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 35
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c575d8e4355433748b518ad4174d7df4
+      internalID: 1824784574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flappy Bird Sprites (1)_13
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 9
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149a0d4667eb9314b8c8791cd0230cce
+      internalID: 1447956969
       vertices: []
       indices: 
       edges: []
@@ -419,6 +482,9 @@ TextureImporter:
       Flappy Bird Sprites (1)_0: 425423766
       Flappy Bird Sprites (1)_1: -1396537581
       Flappy Bird Sprites (1)_10: 701954443
+      Flappy Bird Sprites (1)_11: 1749682042
+      Flappy Bird Sprites (1)_12: 1824784574
+      Flappy Bird Sprites (1)_13: 1447956969
       Flappy Bird Sprites (1)_2: 934680410
       Flappy Bird Sprites (1)_3: -298304747
       Flappy Bird Sprites (1)_4: 1775321367

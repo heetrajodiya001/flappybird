@@ -633,10 +633,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3b0253187c84241a3f7e144f1048fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pilerprefab: {fileID: 1013862139242634771, guid: e60c10f9161581c428700b7e1798811f, type: 3}
+  pilerprefab: {fileID: 6572508391772062274, guid: 43ee21b60d47a1d4580981a3f073a54f, type: 3}
   player: {fileID: 1102352273}
   pileroffset: 3
-  destroypilar: 3
+  destroypilar: 1
 --- !u!4 &1043243322
 Transform:
   m_ObjectHideFlags: 0
@@ -1600,7 +1600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toend: {fileID: 1941857046}
-  birdMove: {fileID: 0}
+  birdMove: {fileID: 1102352274}
+  generatPilar: {fileID: 1043243321}
 --- !u!1 &2071962163
 GameObject:
   m_ObjectHideFlags: 0

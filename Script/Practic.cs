@@ -75,4 +75,5 @@ public class Practic : MonoBehaviour
         score = 0;
         UpdateScore();
     }
+ Coin.transform.position = new Vector3(0, -3.11f, 0);
 }*/

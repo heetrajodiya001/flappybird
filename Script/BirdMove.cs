@@ -12,6 +12,7 @@ public class BirdMove : MonoBehaviour
     Rigidbody2D rb;
     public GameObject toend;
     public countScore countScore;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();      
@@ -31,6 +32,7 @@ public class BirdMove : MonoBehaviour
     {
         transform.position = Vector3.zero;
         countScore.Resetscor();
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {//collision.collider.gameObject.name

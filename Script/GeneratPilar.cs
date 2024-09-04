@@ -8,7 +8,7 @@ public class GeneratPilar : MonoBehaviour
     [SerializeField] GameObject pilerprefab;
     [SerializeField] Transform player;
     [SerializeField] float pileroffset;
-    [SerializeField] float destroypilar;
+    [SerializeField] float destroypilar = 0;
     float lastposition = 0;
     List<GameObject> pilar = new List<GameObject>();
     void Update()
@@ -21,7 +21,8 @@ public class GeneratPilar : MonoBehaviour
         {
             Destroypilar();
         }
-    }
+       // restartgame();
+    }   
     public void Generatpiller()
     {
         lastposition += pileroffset;
@@ -29,6 +30,7 @@ public class GeneratPilar : MonoBehaviour
         var p = Instantiate(pilerprefab);
         p.transform.position = pos;
         pilar.Add(p);
+        
     }
     public void Destroypilar()
     {
@@ -37,5 +39,23 @@ public class GeneratPilar : MonoBehaviour
             Destroy(pilar[0]);
            pilar.RemoveAt(0);
         }
+    }
+    public void restartgame()
+    {
+        transform.position = Vector2.zero;
+        overgame();
+        lastposition = 0;
+        Invoke("Generatpiller",1);
+        //GameObject pilar = GameObject.Find("anime");
+    }
+    private void overgame()
+    {
+        GameObject[] pillar = GameObject.FindGameObjectsWithTag("anime");
+        print("===>"+pillar.Length);
+        foreach (var item in pillar)
+        {
+            Destroy(item);
+        }
+        
     }
 }

@@ -1,44 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 
+using Unity.VisualScripting;
+using UnityEngine;
 public class GeneratPilar : MonoBehaviour
 {
     [SerializeField] GameObject pilerprefab;
     [SerializeField] Transform player;
     [SerializeField] float pileroffset;
-    [SerializeField] float destroypilar = 0;
-    float lastposition = 0;
-    List<GameObject> pilar = new List<GameObject>();
+    
+    float lastposition = 0;  
     void Update()
     {
         if(player.position.x + pileroffset > lastposition) 
         {
             Generatpiller();          
-        }
-        if(player.position.x - pilar[0].transform.position.x > destroypilar)
-        {
-            Destroypilar();
-        }
-       // restartgame();
+        }      
     }   
     public void Generatpiller()
     {
+        float a = Random.Range(-2,2);
         lastposition += pileroffset;
-        var pos = new Vector2(lastposition,0);
+        var pos = new Vector3(lastposition,a);
         var p = Instantiate(pilerprefab);
-        p.transform.position = pos;
-        pilar.Add(p);
-        
-    }
-    public void Destroypilar()
-    {
-        if(pilar.Count > 0 )
-        {
-            Destroy(pilar[0]);
-           pilar.RemoveAt(0);
-        }
+        p.transform.position = pos;           
     }
     public void restartgame()
     {
@@ -46,7 +29,6 @@ public class GeneratPilar : MonoBehaviour
         overgame();
         lastposition = 0;
         Invoke("Generatpiller",1);
-        //GameObject pilar = GameObject.Find("anime");
     }
     private void overgame()
     {
@@ -55,7 +37,7 @@ public class GeneratPilar : MonoBehaviour
         foreach (var item in pillar)
         {
             Destroy(item);
-        }
-        
+        }        
     }
 }
+//2.13    -1.2
